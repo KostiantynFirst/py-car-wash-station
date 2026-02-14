@@ -19,9 +19,9 @@ class CarWashStation:
             return 0.0
         else:
             clean_dif = self.clean_power - car.clean_mark
-            washing_price_part_one = car.comfort_class * clean_dif
-            washing_price_part_two = washing_price_part_one * self.average_rating
-            washing_price = washing_price_part_two / self.distance_from_city_center
+            washing_price_1 = car.comfort_class * clean_dif
+            washing_price_2 = washing_price_1 * self.average_rating
+            washing_price = washing_price_2 / self.distance_from_city_center
             return round(washing_price, 1)
 
     def serve_cars(self, cars_list : list[Car]) -> float:
